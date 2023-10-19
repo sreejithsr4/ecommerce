@@ -1,0 +1,20 @@
+<div *ngIf="wishdata.length==0" class="m-5"><h1 class="text-danger">Wishlist Empty!!  <i class="fa-solid fa-heart-crack fa-2xl" style="color: #fb1d04;"></i></h1></div>
+
+<div>
+   <div class="row m-5">
+<div *ngFor="let i of wishdata"  class=" col-md-4 mt-2" >
+          <div  class="card" style="width: 250px;" >
+              <img style="height:200px" src="{{i.image}}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{i.pname}}</h5>
+                <p>{{i.description}}</p>
+                <p>Price: {{i.price}}Rs</p>
+                <p>Rating: {{i.rating}}/5</p>
+                <a (click)="addcart(i.pid)" class="btn btn-success me-2">Add To Cart</a>
+                <a (click)="remove(i.pid)" class="btn btn-danger">Remove</a>
+              </div>
+            </div>
+</div>
+   </div>
+
+</div>

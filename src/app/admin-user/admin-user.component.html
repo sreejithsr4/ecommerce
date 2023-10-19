@@ -1,0 +1,20 @@
+<div class="m-5">
+    <table class="table table-danger table-striped-columns">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Email</th>
+            <th>Password</th>
+            <th scope="col">Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of userdatas,let j=index">
+            <th scope="row">{{j+1}}</th>
+            <td>{{i.email}}</td>
+            <td>{{i.psw}}</td>
+            <td><i (click)="delete(i._id)" class="fa-solid fa-trash-can fa-xl btn" style="color: #f90606;"></i></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

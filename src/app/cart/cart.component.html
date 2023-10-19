@@ -1,0 +1,29 @@
+<div class="container">
+    <div *ngIf="pdata.length==0" class="m-5"><h1 class="text-danger">Cart Empty!!  <i class="fa-solid fa-cart-arrow-down fa-2xl " style="color: #ff1100;"></i></h1></div>
+    <div *ngFor="let i of pdata" class="row product border border-dark m-5 ">
+        <div class="col-md-5"><img style="height: 180px;" src="{{i.image}}" alt=""></div>
+        <div class="col-md-6">
+           <div class="d-flex justify-content-between mt-2"> <h4>{{i.pname}}</h4>   <button (click)="remove(i._id)" class="btn btn-danger">Remove</button></div>
+            <p >{{i.description}}</p>
+          <div  class="mb-2">
+             <button (click)="decrement(i._id)" class="btn btn-dark">-</button> 
+             <p class="mt-2 ms-2"  style="width: 20px;">{{i.quantity}}</p>
+             <button (click)="increment(i._id)" class="btn btn-dark" >+</button>
+            </div>
+            <p><strong>Price:</strong> {{i.totalprice}}Rs</p>
+         
+            
+        </div>
+        <div></div>
+    </div>
+    <div *ngIf="pdata.length!==0" class="row m-5 p-3">
+        <div class="col-md-5"></div>
+        <div class="col-md-6"><p>Price:{{fullprice}}</p>
+            <p>Discount: <span class="text-danger">-0</span></p>
+            <p>Delivery Charges : <span class="text-success">FREE Delivery</span></p>
+            <p>Total:{{fullprice}}</p>
+            <button (click)="payment(fullprice)" class="btn btn-warning">Place Order</button>
+        </div>
+
+    </div>
+</div>

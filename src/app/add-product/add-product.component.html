@@ -1,0 +1,12 @@
+<div>
+    <form class="d-flex flex-column w-50 form-control" action="" [formGroup]="addproduct">
+        <input formControlName="pname" placeholder="Product Name" type="text" name="pname" id="pname">
+        <input formControlName="price" placeholder="Price" type="text" name="price" id="price">
+        <input formControlName="image" placeholder="Image url" type="text" name="image" id="image">
+        <input formControlName="rating" placeholder="Rating" type="text" name="rating" id="rating">
+        <input formControlName="description" placeholder="Description" type="text" name="des" id="des">
+        <input formControlName="count" placeholder="Count" type="text" name="count" id="count">
+<button (click)="add()" type="submit" class="btn btn-dark">Submit</button>
+
+    </form>
+</div>

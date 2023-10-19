@@ -1,0 +1,35 @@
+<div class="m-5">
+  <h1 class="text-center">Product Management</h1>
+  <button (click)="AddProduct()" class="btn btn-primary mb-4">Add Product</button>
+  <button (click)="home()" class="btn btn-info mb-4 ms-4">Home</button>
+  <table class="table table-danger table-striped-columns">
+    <thead>
+      <tr>
+        <th class="border border-dark" scope="col">#</th>
+        <th class="border border-dark" scope="col">name</th>
+        <th class="border border-dark" scope="col">price</th>
+        <th class="border border-dark" class="border border-dark" class="border border-dark" scope="col">image</th>
+        <th class="border border-dark" scope="col">description</th>
+        <th class="border border-dark" scope="col">rating</th>
+        <th class="border border-dark" scope="col">count</th>
+        <th class="border border-dark" scope="col">Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of allproducts,let j=index">
+        <th class="border border-dark">{{j+1}}</th>
+        <td class="border border-dark">{{i.pname}}</td>
+        <td class="border border-dark">{{i.price}}</td>
+        <td class="border border-dark"><img style="height:200px;" src="{{i.image}}" alt=""></td>
+        <td class="border border-dark">{{i.description}}</td>
+        <td class="border border-dark">{{i.rating}}</td>
+        <td class="border border-dark">{{i.count}}</td>
+        <td class="border border-dark"><button (click)="editproduct(i._id)" class="btn btn-info"><i
+              class="fa-solid fa-pen-to-square pe-1" style="color: #ffffff;"></i>Edit</button><button
+            class="btn btn-danger" (click)="deleteproduct(i._id)"><i class="fa-solid fa-trash pe-1" style="color: #fafafa;"></i>Delete</button></td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

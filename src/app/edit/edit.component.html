@@ -1,0 +1,13 @@
+<div>
+    <form class="d-flex flex-column w-50 form-control" action="" (ngSubmit)="edit()">
+        <input [(ngModel)]="pdata.pname" placeholder="Product Name" type="text" name="pname" id="pname">
+        <input [(ngModel)]="pdata.price" placeholder="Price" type="text" name="price" id="price">
+        <input [(ngModel)]="pdata.image" placeholder="Image url" type="text" name="image" id="image">
+        <input [(ngModel)]="pdata.rating" placeholder="Rating" type="text" name="rating" id="rating">
+        <input [(ngModel)]="pdata.description" placeholder="Description" type="text" name="des" id="des">
+        <input [(ngModel)]="pdata.count" placeholder="Count" type="text" name="count" id="count">
+<button  type="submit" class="btn btn-dark">Submit</button>
+
+    </form>
+</div>
+

@@ -1,0 +1,12 @@
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1"><i class="fa-solid fa-futbol fa-2xl ms-2 me-2" style="color: #ee3a88;"></i>
+      <a style="font-family: 'Young Serif', serif;font-size:x-large;color: #ee3a88;" routerLink="">SHOPZONE</a></span> 
+    <div  *ngIf="login"  class="d-flex flex-end justify-content-center align-items-center">
+      <i (click)="wish()" class="fa-solid fa-heart fa-2xl btn" style="color: #d53434;"></i>
+      <div (click)="cart()"><i  class="fa-solid fa-cart-shopping fa-2xl mt-2" style="color: #1a55bc;"></i></div>
+      <p class="bg-danger text-white ps-2 pe-2 me-3">{{count}}</p>
+      <button (click)="logout()" class="btn btn-warning">Logout</button>
+    </div>
+  </div>
+</nav>

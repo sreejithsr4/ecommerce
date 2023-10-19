@@ -1,0 +1,25 @@
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center ">
+            <div class="col-md-6 border border-dark"><img style="height: 400px;" class="card-img-top mb-5 mb-md-0" src="{{pdata.image}}" alt="..." /></div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder">{{pdata.pname}}</h1>
+                <div class="fs-5 mb-2">
+                    <span class="text-decoration-line-through pe-2">₹1500</span>
+                    <span>₹{{pdata.price}}</span>
+                </div>
+                <p class="lead">{{pdata.description}}</p>
+                <p class="lead">Count:{{pdata.count}}</p>
+                <p class="lead">Rating:{{pdata.rating}}</p>
+                <div class="d-flex">
+                    <button (click)="wish()" class="btn btn-outline-info me-2">Wishlist</button>
+                    <button (click)="usercheck()" class="btn btn-outline-success flex-shrink-0" type="button">
+                        
+                        <i class="bi-cart-fill me-1"></i>
+                        Add to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
